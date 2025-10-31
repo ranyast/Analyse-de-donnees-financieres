@@ -28,7 +28,7 @@ Notre application permet de croiser plusieurs thématiques :
 #### 1. Marché immobilier (2020–2024)
 **Fichier :** `statistiques_grandes_villes_2020_2024_toutes_colonnes.csv`
 
-**Source :** Ministère de la Transition Écologique – Données de valeurs foncières (DVF)  
+**Source :** [Données de valeurs foncières](https://files.data.gouv.fr/geo-dvf/latest/csv/) – Données de valeurs foncières (DVF)  
 
 **Contenu :**
 - Prix moyen au m² et nombre de transactions par ville et par année.  
@@ -115,7 +115,6 @@ Analyse effectuée à partir du fichier du ministère de l’Enseignement Supér
 - Regroupement du nombre d’étudiants par **ville** et **année universitaire**,
 - Calcul du **delta et du taux d’évolution** entre 2001–02 et 2023–24.
 
----
 
 #### 4. Incivilités
 
@@ -135,16 +134,7 @@ Chaque graphique se met automatiquement à jour selon les villes sélectionnées
 
 ---
 
-### VII. Perspectives d’évolution
-
-- Automatisation de la mise à jour des données à partir des API publiques (INSEE, ESR, DVF).  
-- Ajout de modèles de prévision (Prophet, ARIMA) pour estimer les tendances futures.  
-- Déploiement de l’application sous forme de tableau de bord interactif (**Streamlit** ou **Dash**).  
-- Intégration de visualisations géographiques.  
-
----
-
-### VIII. Équipe projet
+### VII. Équipe projet
 
 Dans ce projet, nous avons tous participer à l'analyse de données, leur nettoyage et par la suite leur visualisation. 
 
