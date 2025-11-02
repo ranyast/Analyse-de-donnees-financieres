@@ -17,9 +17,11 @@ Marseille, Montpellier et Paris. Son objectif : investir intelligemment pour ass
 
 Notre application permet de croiser plusieurs thématiques :
 - L'évolution et la tendance du marché immobilier
+- - -A METTRE
 - Les effectifs étudiants dans ses villes
 - Les incivilités qui y sont recensées
 - L’évolution de la population par ville
+ 
 
 ---
 
