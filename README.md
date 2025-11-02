@@ -17,7 +17,7 @@ Marseille, Montpellier et Paris. Son objectif : investir intelligemment pour ass
 
 Notre application permet de croiser plusieurs thématiques :
 - L'évolution et la tendance du marché immobilier
-- Le calcul du rendement en fonction du budget, de la surface donnés
+- Le calcul du rendement en fonction de la ou des ville(s), du budget, de la surface donnés
 - Les effectifs étudiants dans ses villes
 - Les incivilités qui y sont recensées
 - L’évolution de la population par ville
@@ -72,27 +72,30 @@ Notre application permet de croiser plusieurs thématiques :
 - `Zone_geographique`, `annee`, `Valeurs`, `Champ`.
 
 #### 5. Loyers relevés par commune et calcul du rendement (2023-2024)
-**Fichier :** `loyers_rendement.csv`  
+**Fichier :** `loyers_rendement_reel.csv`  
 
-**Source :** [data.gouv.fr](https://www.data.gouv.fr) – Résultats nationaux des observatoires locaux des loyers.  
+**Source :** 
+- [data.gouv.fr](https://www.data.gouv.fr) – Résultats nationaux des observatoires locaux des loyers.
+- [Moyenne des prix du m2 en 2024](https://www.meilleursagents.com/prix-immobilier/) - Données de valeurs foncières (DVF)
+
 
 **Contenu :**
 - Loyers observés selon le type de logement, l'époque de construction, le nombre de pièces ou l'ancienneté d'occupation.  
-**Colonnes principales :**
+**Colonnes principales sélectionnées:**
 - `annee`, `agglomeration`, `Type d'habitat`, `loyer_median`, `loyer_mensuel`, `surface_moyenne`
 
 ---
 
 ### III. Objectifs analytiques
 
-| Domaine d’étude        | Objectif                                                                     | Période   |
-|------------------------|------------------------------------------------------------------------------|-----------|
+| Domaine d’étude        | Objectif                                                                     | Période |
+|------------------------|------------------------------------------------------------------------------|------|
 | Marché immobilier      | Étudier l’évolution des prix moyens au m² et du volume des transactions      | 2020–2024 |
 | Enseignement supérieur | Observer la dynamique des effectifs étudiants par grande ville universitaire | 2001–2024 |
 | Population             | Analyser la croissance ou le déclin démographique par département            | 2016–2021 |
 | Incivilités            | Mettre en relation le nombre d’incivilités avec la population départementale | 2016–2024 |
-| Loyers                 | Comparer les différents loyers dans les communes                             | 2023–2024 |
-| Rendement              | Savoir combien un investissement a rapporté par rapport au capital investi   | 2016–2024 |
+| Loyers                 | Comparer les différents loyers dans les différentes villes                   | 2023–2024 |
+| Rendement              | Savoir combien un investissement a rapporté par rapport au capital investi   | 2024 |
 ---
 
 ### IV. Technologies utilisées
@@ -139,7 +142,11 @@ Des visualisations temporelles et comparatives permettent de mettre en évidence
 
 #### 5. Loyer et Rendement 
 
-à compléter 
+- Import des fichiers CSV bruts contenant les loyers par commune et type de bien. 
+- Nettoyage des colonnes : suppression des valeurs manquantes, uniformisation des noms de villes et des types de biens. 
+- Conversion des données numériques (loyers, surfaces, prix) au format float pour garantir la fiabilité des calculs. 
+- Fusion des fichiers de loyers et de prix immobiliers pour chaque ville. 
+- Calcul des indicateurs dérivés : loyer annuel, rendement brut et nombre d’observations par ville.
 
 ---
 
@@ -160,18 +167,22 @@ Dans ce projet, nous avons tous participer à l'analyse de données, leur nettoy
 
 Cependant, nous avons tous travaillé sur des widgets différents que vous allez trouver ci-dessous : 
 
-| Nom               | Rôle                                                                                 |
-|-------------------|--------------------------------------------------------------------------------------|
-| STITOU Ranya      | Widget `Incivilités dans les villes étudiantes`, `README.md`                         |
-| LALLEMENT Antoine | Widget `cases à cocher`, `Evolution du marché immobilier`, `Evolution des étudiants` |
-| AYRIVIE Pia       | Widget `choix des paramètres`, `classement du meilleur résultat`                     |
-| BOUZOUBAA Salma   | Widget `choix des paramètres`, `classement du meilleur résultat`                                                                               |
+| Nom               | Rôle                                                                                   |
+|-------------------|----------------------------------------------------------------------------------------|
+| STITOU Ranya      | Widget `Incivilités dans les villes étudiantes`, `README.md`                           |
+| LALLEMENT Antoine | Widget `cases à cocher`, `Evolution du marché immobilier`, `Evolution des étudiants`   |
+| AYRIVIE Pia       | Widget `choix des paramètres`, `classement du meilleur résultat`   (travail en binôme) |
+| BOUZOUBAA Salma   | Widget `choix des paramètres`, `classement du meilleur résultat`   (travail en binôme) |
 
 ---
 
 ### IX. Conclusion
 
-FAIRE UNE CONCLUSION ! 
+Ce projet nous a permis de consolider nos compétences en data science appliquée, depuis la préparation et le nettoyage des données jusqu’à leur visualisation dynamique dans une interface interactive.
+Nous avons appris à manipuler des données ouvertes (open data) complexes, à croiser plusieurs sources hétérogènes (INSEE, Etalab, ESR, SSMSI) et à en extraire des indicateurs pertinents pour la prise de décision.
+
+Sur le plan pédagogique, ce travail nous a permis de maîtriser l’ensemble du pipeline de traitement des données : collecte, transformation, agrégation, analyse statistique et restitution visuelle.
+Ces compétences sont directement mobilisables dans nos alternances, notamment dans des missions de data analyse, data visualisation ou de développement d’outils décisionnels.
 
 ---
 
