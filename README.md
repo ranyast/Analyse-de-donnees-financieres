@@ -17,7 +17,7 @@ Marseille, Montpellier et Paris. Son objectif : investir intelligemment pour ass
 
 Notre application permet de croiser plusieurs thématiques :
 - L'évolution et la tendance du marché immobilier
-- - -A METTRE
+- Le calcul du rendement en fonction du budget, de la surface donnés
 - Les effectifs étudiants dans ses villes
 - Les incivilités qui y sont recensées
 - L’évolution de la population par ville
@@ -49,6 +49,7 @@ Notre application permet de croiser plusieurs thématiques :
 **Colonnes principales :**
 - `dep`, `nom_dep`, `p16_pop`, `p17_pop`, …, `p24_pop`.
 
+
 #### 3. Effectifs étudiants (2001–2023)
 **Fichier :** `fr-esr-atlas_regional-effectifs-d-etudiants-inscrits.csv`
 
@@ -70,17 +71,28 @@ Notre application permet de croiser plusieurs thématiques :
 **Colonnes principales :**
 - `Zone_geographique`, `annee`, `Valeurs`, `Champ`.
 
+#### 5. Loyers relevés par commune et calcul du rendement (2023-2024)
+**Fichier :** `loyers_rendement.csv`  
+
+**Source :** [data.gouv.fr](https://www.data.gouv.fr) – Résultats nationaux des observatoires locaux des loyers.  
+
+**Contenu :**
+- Loyers observés selon le type de logement, l'époque de construction, le nombre de pièces ou l'ancienneté d'occupation.  
+**Colonnes principales :**
+- `annee`, `agglomeration`, `Type d'habitat`, `loyer_median`, `loyer_mensuel`, `surface_moyenne`
+
 ---
 
 ### III. Objectifs analytiques
 
-| Domaine d’étude | Objectif | Période   |
-|------------------|-----------|-----------|
-| Marché immobilier | Étudier l’évolution des prix moyens au m² et du volume des transactions | 2020–2024 |
+| Domaine d’étude        | Objectif                                                                     | Période   |
+|------------------------|------------------------------------------------------------------------------|-----------|
+| Marché immobilier      | Étudier l’évolution des prix moyens au m² et du volume des transactions      | 2020–2024 |
 | Enseignement supérieur | Observer la dynamique des effectifs étudiants par grande ville universitaire | 2001–2024 |
-| Population | Analyser la croissance ou le déclin démographique par département | 2016–2021 |
-| Incivilités | Mettre en relation le nombre d’incivilités avec la population départementale | 2016–2024 |
-
+| Population             | Analyser la croissance ou le déclin démographique par département            | 2016–2021 |
+| Incivilités            | Mettre en relation le nombre d’incivilités avec la population départementale | 2016–2024 |
+| Loyers                 | Comparer les différents loyers dans les communes                             | 2023–2024 |
+| Rendement              | Savoir combien un investissement a rapporté par rapport au capital investi   | 2016–2024 |
 ---
 
 ### IV. Technologies utilisées
@@ -125,6 +137,12 @@ Des visualisations temporelles et comparatives permettent de mettre en évidence
 
 ---
 
+#### 5. Loyer et Rendement 
+
+à compléter 
+
+---
+
 ### VI. Interface interactive
 
 L’application repose sur un ensemble de widgets interactifs (`ipywidgets`), notamment :
@@ -146,14 +164,15 @@ Cependant, nous avons tous travaillé sur des widgets différents que vous allez
 |-------------------|--------------------------------------------------------------------------------------|
 | STITOU Ranya      | Widget `Incivilités dans les villes étudiantes`, `README.md`                         |
 | LALLEMENT Antoine | Widget `cases à cocher`, `Evolution du marché immobilier`, `Evolution des étudiants` |
-| AYRIVIE Pia       | A METTRE                                                                             |
-| BOUZOUBAA Salma   | A METTRE                                                                             |
+| AYRIVIE Pia       | Widget `choix des paramètres`, `classement du meilleur résultat`                     |
+| BOUZOUBAA Salma   | Widget `choix des paramètres`, `classement du meilleur résultat`                                                                               |
 
 ---
 
 ### IX. Conclusion
 
 FAIRE UNE CONCLUSION ! 
+
 ---
 
 *(Projet académique – ING 4 DATA & IA – 2025)*
