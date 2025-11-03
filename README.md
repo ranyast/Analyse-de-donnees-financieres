@@ -103,7 +103,6 @@ Notre application permet de croiser plusieurs thématiques :
 - **Langage :** Python 3.9 ou 3.10 
 - **Bibliothèques :**
   - `pandas` : manipulation et transformation de données
-  - `numpy` : calculs statistiques
   - `matplotlib` : visualisations statiques
   - `plotly.express`, `plotly.graph_objects` : visualisations interactives
   - `ipywidgets` : interface utilisateur dynamique
